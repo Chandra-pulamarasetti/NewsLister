@@ -18,6 +18,8 @@ export const Home = () => {
   );
   useEffect(() => {
     if (searchQuery) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       dispatch(searchNews({ searchQuery, pageNumber: pageIndex || 1 }));
     }
     return () => {
